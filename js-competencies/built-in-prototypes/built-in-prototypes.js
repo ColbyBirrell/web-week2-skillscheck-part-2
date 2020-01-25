@@ -8,14 +8,13 @@
 //dragonMapper should return the the new array. You should
 //use the built-in array method .map
 
-function dragonMapper (arr){
-  let newArr = arr.map((element) => {
-    return element += '...here be dragons'
-  })
+function dragonMapper(arr) {
+  let newArr = arr.map(element => {
+    return (element += "...here be dragons");
+  });
   // console.log(newArr)
-  return newArr
+  return newArr;
 }
-
 
 //////////////////PROBLEM 2////////////////////
 
@@ -24,15 +23,15 @@ function dragonMapper (arr){
 //does NOT have the key favoriteCookie.
 //cookieLoversOnly should return the filtered array.
 
-function cookieLoversOnly (arr){
+function cookieLoversOnly(arr) {
   // console.log(arr)
-  arr.filter((element) => {
-    if(element.favoriteCookie){
-      return element
+  let newArr = arr.filter(element => {
+    if (element.favoriteCookie) {
+      return element;
     }
-  })
-  console.log(arr)
-  return arr
+  });
+  // console.log(newArr);
+  return newArr;
 }
 
 //////////////////PROBLEM 3////////////////////
@@ -45,7 +44,11 @@ function cookieLoversOnly (arr){
 //the callback function as an argument every time it is invoked.
 //Hint: there is an array method for this.
 
-//Code here
+function changeValue(arr, callback) {
+  arr.forEach(function(element) {
+    callback(element);
+  });
+}
 
 //////////////////PROBLEM 4////////////////////
 
@@ -55,8 +58,13 @@ function cookieLoversOnly (arr){
 //of multiplying all the elements together)
 //Return the product.
 
-//Code here
-
+function findProduct(arr) {
+  let product = arr.reduce((acc, curr) => {
+    return acc * curr;
+  });
+  // console.log(product);
+  return product;
+}
 //////////////////PROBLEM 5////////////////////
 
 //Write a function called cipherize that takes in
@@ -71,7 +79,11 @@ function cookieLoversOnly (arr){
 // character at index 2 of "wide": "d"
 // cipherize will return: "d"
 
-//Code here
+//my code
+// function cipherize(arr, string) {
+//   arr.indexOf();
+//   console.log(arr.indexOf(string));
+// }
 
 //////////////////PROBLEM 6////////////////////
 
@@ -80,4 +92,9 @@ function cookieLoversOnly (arr){
 //string. Use built-in methods for taking the string
 //apart, reversing it, and putting it back together again.
 
-//Code here
+function reverseMe(string) {
+  let splitstr = string.split("");
+  let reversearr = splitstr.reverse();
+  let joinarr = reversearr.join("");
+  return joinarr;
+}

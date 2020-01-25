@@ -8,17 +8,20 @@
 
 var sunsetColors = ["brown", "purple", "pink", "red", "orange", "yellow"];
 
-// function sunset (sunsetColors){
-//     let newArr = sunsetColors.map((element, index) => {
-//         if()
-//     })
+// function sunset() {
+//   let newArr = [];
+//   for (i = 0; i < sunsetColors.length; i++) {
+//     newArr.push(sunsetColors[i]);
+//   }
+//   newArr.splice(0, 1, "blue");
+//   console.log(newArr);
 // }
 
-// let sunset = sunsetColors.map((element, index) => {
-//   if (index === sunsetColors[0]) {
-//     element = "blue";
-//   }
-// });
+function sunset() {
+  let newColors = sunsetColors;
+  newColors[0] = "blue";
+  return newColors;
+}
 
 //////////////////PROBLEM 2////////////////////
 
@@ -28,7 +31,15 @@ var sunsetColors = ["brown", "purple", "pink", "red", "orange", "yellow"];
 
 var sunriseColors = ["yellow", "orange", "red", "pink", "purple", "blue"];
 
-//Code here
+function sunrise() {
+  let newArr = [];
+  for (i = 0; i < sunriseColors.length; i++) {
+    newArr.push(sunriseColors[i]);
+  }
+  newArr[0] = "green";
+  console.log(newArr);
+  return newArr;
+}
 
 //////////////////PROBLEM 3////////////////////
 
@@ -45,7 +56,7 @@ var sunriseColors = ["yellow", "orange", "red", "pink", "purple", "blue"];
 //                 pass by value creates a new array in state with the same
 //                 values. A change made to a reference copy will change both
 //                 the copy and the original; a copy made by value will only
-//                 change the copy's values`
+//                 change the copy's values`;
 
 // var refVsVal = `Passing by reference points to the same object in memory;
 //                 pass by value creates a new object in memory with the same
@@ -57,4 +68,4 @@ var sunriseColors = ["yellow", "orange", "red", "pink", "purple", "blue"];
 //                 points to the original array in memory; pass by value creates
 //                 a new array in state with the same memory address. A change
 //                 made to a either a reference copy or a value copy will change
-//                 both the copy and the original`
+//                 both the copy and the original`;
